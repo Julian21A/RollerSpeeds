@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: rollerspeed-local
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:fruit_store}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}

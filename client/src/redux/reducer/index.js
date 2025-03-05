@@ -1,4 +1,3 @@
-// src/redux/authSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -43,3 +42,4 @@ export const loginUser = (userData) => async (dispatch) => {
 };
 
 export default authSlice.reducer;
+

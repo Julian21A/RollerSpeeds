@@ -14,6 +14,7 @@
 .form-label {
   font-weight: bold !important;
   margin-top: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
 }
 
 .card-img-top {
@@ -26,12 +27,14 @@
 
 .input-form {
   width: 300px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .btn {
   background-color: #c45886 !important;
   border: none !important;
   margin: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
 }
 
 .btn:hover {
@@ -44,6 +47,7 @@
 }
 
 .error-alert {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: #962737;
   margin-top: 10px;
 }

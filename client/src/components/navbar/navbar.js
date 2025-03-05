@@ -4,7 +4,7 @@ import logouticon from "../../assets/logout.png";
 import patin from "../../assets/patin.png";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../redux/Reducer";
+import { logout } from "../../redux/Reducer/authSlice";
 
 export function NavBar() {
   const navigate = useNavigate();

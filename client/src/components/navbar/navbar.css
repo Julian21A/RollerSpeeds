@@ -4,6 +4,7 @@
   height: 60px;
   box-shadow: none !important;
   border: none !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
 }
 
 .container-fluid {
@@ -37,6 +38,7 @@
 }
 
 .login-sec {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   position: relative;
   margin: 10px;
   color: white !important;
@@ -63,6 +65,7 @@
 }
 
 .user-name {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding-top: 7px;
   color: white;
   margin-right: 10px;

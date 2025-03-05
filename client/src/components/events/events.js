@@ -1,7 +1,7 @@
 export function Events() {
   return (
     <div>
-      <a>Aqui se veran eventos</a>
+      <span>Aqui se veran eventos</span>
     </div>
   );
 }

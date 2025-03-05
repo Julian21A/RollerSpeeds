@@ -1,9 +1,9 @@
-export function Vision(){
-    return(
-        <div>
-            <a>No veo, estoy ciego!</a>
-        </div>
-    )
+export function Vision() {
+  return (
+    <div>
+      <a>No veo, estoy ciego!</a>
+    </div>
+  );
 }
 
-export default Vision
+export default Vision;

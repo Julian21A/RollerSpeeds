@@ -13,9 +13,17 @@ export function Login() {
     userName: "",
     password: "",
   });
-
   const { loading, error } = useSelector((state) => state.auth);
 
+  /**
+   * Maneja los cambios en los campos de entrada del formulario.
+   *
+   * Esta función se ejecuta cada vez que un usuario cambia el valor de un campo en el formulario.
+   * Actualiza el estado `userData` con los nuevos valores proporcionados por el usuario.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - El objeto del evento que contiene la información del campo de entrada modificado.
+   * @returns {void} No retorna ningún valor. Solo actualiza el estado `userData`.
+   */
   const handleChange = (e) => {
     setUserData({
       ...userData,
@@ -23,6 +31,18 @@ export function Login() {
     });
   };
 
+  /**
+   * Maneja el envío del formulario de login.
+   *
+   * Esta función se ejecuta cuando el usuario envía el formulario de login.
+   * Previene el comportamiento por defecto del formulario (recargar la página),
+   * realiza una llamada a la acción `loginUser` para autenticar al usuario
+   * y redirige al usuario a la página principal si la autenticación es exitosa.
+   *
+   * @param {Event} e - El objeto del evento que representa el envío del formulario.
+   * @returns {Promise<void>} No retorna ningún valor.
+   * En caso de error, el flujo se maneja dentro del bloque `catch`.
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

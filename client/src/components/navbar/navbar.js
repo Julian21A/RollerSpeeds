@@ -7,14 +7,22 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../redux/Reducer";
 
 export function NavBar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const { success, user } = useSelector((state) => state.auth);
 
+  /**
+   * Maneja el cierre de sesión del usuario.
+   *
+   * Esta función despacha una acción para cerrar la sesión del usuario
+   * y luego redirige al usuario a la página de inicio.
+   *
+   * @returns {void} No retorna ningún valor. Solo realiza el logout y redirige al inicio.
+   */
   const handleLogout = () => {
     dispatch(logout());
-    navigate('/')
+    navigate("/");
   };
 
   return (

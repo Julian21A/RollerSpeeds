@@ -2,7 +2,7 @@ import "./login.css";
 import patin from "../../assets/patin.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { loginUser } from "../../redux/Reducer";
+import { loginUser } from "../../redux/Reducer/authSlice";
 import { useNavigate } from "react-router-dom";
 
 export function Login() {

@@ -1,7 +1,7 @@
 export function Services() {
   return (
     <div>
-      <a>Ninguno, siguiente!</a>
+      <span>Ninguno, siguiente!</span>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 export function Prices() {
   return (
     <div>
-      <a>Ta caro</a>
+      <span>Ta caro</span>
     </div>
   );
 }

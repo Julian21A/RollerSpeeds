@@ -3,11 +3,11 @@ import patin from "../../assets/patin.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { loginUser } from "../../redux/Reducer";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
   const dispatch = useDispatch();
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const [userData, setUserData] = useState({
     userName: "",
@@ -27,7 +27,7 @@ export function Login() {
     e.preventDefault();
     try {
       await dispatch(loginUser(userData));
-      history.push('/'); 
+      navigate("/");
     } catch (err) {}
   };
 

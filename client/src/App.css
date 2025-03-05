@@ -1,20 +1,19 @@
-
 body::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./assets/trybackground.jpg');
+  background-image: url("./assets/trybackground.jpg");
   background-position: center;
   background-repeat: repeat;
   background-size: 10%;
-  opacity: 0.2;
+  opacity: 0.15;
   z-index: -1;
 }
 
 header {
-  background-color: #cd4680;
+  background-color: #c45886;
   height: 60px;
 }

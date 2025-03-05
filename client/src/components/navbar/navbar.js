@@ -1,17 +1,20 @@
 import "./navbar.css";
 import loginIcon from "../../assets/loginicon.png";
-import { NavLink } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-import { logout } from '../../redux/Reducer'; 
+import logouticon from "../../assets/logout.png";
+import patin from "../../assets/patin.png";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../redux/Reducer";
 
 export function NavBar() {
+  const navigate = useNavigate()
   const dispatch = useDispatch();
 
   const { success, user } = useSelector((state) => state.auth);
 
   const handleLogout = () => {
     dispatch(logout());
-    
+    navigate('/')
   };
 
   return (
@@ -19,6 +22,14 @@ export function NavBar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div className="container-fluid">
           <NavLink className="navlink" to="/">
+            <img
+              width="30px"
+              height="30px"
+              className="logo-mini"
+              id="logo"
+              src={patin}
+              alt="wallpaper"
+            />
             <span className="navbar-brand">RollerSpeed</span>
           </NavLink>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -78,10 +89,16 @@ export function NavBar() {
         </NavLink>
       ) : (
         <div className="user-info">
-          <span className="user-name">Hola, {user?.name}</span>{" "}
-          <button className="btn btn-danger" onClick={handleLogout}>
-            Cerrar sesión
-          </button>{" "}
+          <h6 className="user-name">Hola, {user?.name}</h6>{" "}
+          <img
+            className="icon-logout"
+            id="loginIcon"
+            src={logouticon}
+            width="25px"
+            height="25px"
+            alt="puertita"
+            onClick={handleLogout}
+          />
         </div>
       )}
     </header>

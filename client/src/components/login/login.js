@@ -1,20 +1,20 @@
-import './login.css'
-import patin from '../../assets/patin.png'
-import { useDispatch, useSelector } from 'react-redux';
-import { useState } from 'react';
-import { loginUser } from '../../redux/Reducer';
+import "./login.css";
+import patin from "../../assets/patin.png";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { loginUser } from "../../redux/Reducer";
 import { useNavigate } from 'react-router-dom';
 
 export function Login() {
-
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const history = useNavigate();
+
   const [userData, setUserData] = useState({
-    username: '',
-    password: '',
+    userName: "",
+    password: "",
   });
 
-  const { loading, error, success } = useSelector((state) => state.auth);
+  const { loading, error } = useSelector((state) => state.auth);
 
   const handleChange = (e) => {
     setUserData({
@@ -27,8 +27,8 @@ export function Login() {
     e.preventDefault();
     try {
       await dispatch(loginUser(userData));
-    } catch (err) {
-    }
+      history.push('/'); 
+    } catch (err) {}
   };
 
   return (
@@ -38,15 +38,15 @@ export function Login() {
         <div className="login-form">
           <form onSubmit={handleSubmit}>
             <div className="input-form">
-              <label htmlFor="username" className="form-label">
+              <label htmlFor="userName" className="form-label">
                 Username:
               </label>
               <input
                 type="text"
                 className="form-control"
-                id="username"
-                name="username"
-                value={userData.username}
+                id="userName"
+                name="userName"
+                value={userData.userName}
                 onChange={handleChange}
                 placeholder="username"
               />
@@ -68,8 +68,12 @@ export function Login() {
             <div className="error-container">
               {error && <span className="error-alert">{error}</span>}
             </div>
-            <button type="submit" className="btn btn-primary" disabled={loading}>
-              {loading ? 'Cargando...' : 'Aceptar'}
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={loading}
+            >
+              {loading ? "Cargando..." : "Aceptar"}
             </button>
           </form>
         </div>
@@ -79,4 +83,3 @@ export function Login() {
 }
 
 export default Login;
-

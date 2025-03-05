@@ -5,7 +5,7 @@
 }
 
 .container-fluid {
-    background-color: #962737 !important;
+    background-color: #cd4680!important;
 }
 
 .navbar-brand{
@@ -20,7 +20,7 @@
 }
 
 .nav-item:hover{
-    background-color: #af3346 !important;
+    background-color: #ce1464 !important;
     margin: 0px 10px 0px 10px;
 }
 
